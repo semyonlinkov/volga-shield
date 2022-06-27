@@ -3,9 +3,12 @@ import styles from './Services.module.scss';
 
 const Services = () => {
 	return (
-		<div className={styles.wrapper}>
+		<section className={styles.services_wrapper}>
 			<div className={styles.card_objectGuard}>
 				<h2>Охрана Объектов</h2>
+				<button className="btn" style={{ padding: '10px' }}>
+					<span>Узнать больше</span>
+				</button>
 			</div>
 			<div className={styles.card_personalGuard}>
 				<h2>Личная Охрана</h2>
@@ -25,7 +28,7 @@ const Services = () => {
 			<div className={styles.card_controlPanel}>
 				<h2>Контрольная панель</h2>
 			</div>
-		</div>
+		</section>
 	);
 };
 

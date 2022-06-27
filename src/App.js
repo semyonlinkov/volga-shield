@@ -1,14 +1,21 @@
 import './App.css';
 import Header from './components/Header/Header';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
+import BurgerMenu from './components/BurgerMenu/BurgerMenu';
 import MainPage from './components/MainPage/MainPage';
-import Services from './components/Services/Services';
+import Footer from './components/Footer/Footer';
 
 function App() {
+	const [burgerActive, setBurgerActive] = useState(false);
+
 	return (
-		<div className="global_wrapper">
-			<Header />
-			<Services />
-		</div>
+		<BrowserRouter>
+			<BurgerMenu active={burgerActive} setActive={setBurgerActive} />
+			<Header active={burgerActive} setActive={setBurgerActive} />
+			<MainPage />
+			<Footer />
+		</BrowserRouter>
 	);
 }
 
