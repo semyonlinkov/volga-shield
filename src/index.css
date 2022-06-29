@@ -88,3 +88,7 @@ h5 {
 	z-index: 1;
 	position: relative;
 }
+
+.ql-editor {
+	min-height: 150px;
+}

@@ -1,6 +1,9 @@
 import React from 'react';
 import Hero from '../Hero/Hero';
+import Map from '../Map/Map';
 import News from '../News/News';
+import Partners from '../Partners/Partners';
+import Clients from '../Clients/Clients';
 import Services from '../Services/Services';
 
 const MainPage = () => {
@@ -9,6 +12,9 @@ const MainPage = () => {
 			<Hero />
 			<Services />
 			<News />
+			<Clients />
+			<Partners />
+			<Map />
 		</>
 	);
 };

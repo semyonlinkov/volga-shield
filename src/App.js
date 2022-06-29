@@ -5,6 +5,8 @@ import { useState } from 'react';
 import BurgerMenu from './components/BurgerMenu/BurgerMenu';
 import MainPage from './components/MainPage/MainPage';
 import Footer from './components/Footer/Footer';
+import Login from './components/Login/Login';
+import Cabinet from './components/Cabinet/Cabinet';
 
 function App() {
 	const [burgerActive, setBurgerActive] = useState(false);
@@ -15,6 +17,8 @@ function App() {
 			<Header active={burgerActive} setActive={setBurgerActive} />
 			<MainPage />
 			<Footer />
+			{/* <Login /> */}
+			{/* <Cabinet /> */}
 		</BrowserRouter>
 	);
 }
