@@ -1,12 +1,13 @@
 import './App.css';
 import Header from './components/Header/Header';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import BurgerMenu from './components/BurgerMenu/BurgerMenu';
 import MainPage from './components/MainPage/MainPage';
 import Footer from './components/Footer/Footer';
 import Login from './components/Login/Login';
 import Cabinet from './components/Cabinet/Cabinet';
+import { ConfigProvider } from 'antd';
 
 function App() {
 	const [burgerActive, setBurgerActive] = useState(false);

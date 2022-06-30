@@ -17,6 +17,14 @@
 		animation-iteration-count: infinite;
 		animation-timing-function: linear;
 		animation-direction: alternate;
+
+		img {
+			filter: grayscale(1);
+		}
+
+		img:hover {
+			filter: grayscale(0);
+		}
 	}
 
 	@keyframes slide {

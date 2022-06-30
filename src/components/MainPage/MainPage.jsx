@@ -5,15 +5,17 @@ import News from '../News/News';
 import Partners from '../Partners/Partners';
 import Clients from '../Clients/Clients';
 import Services from '../Services/Services';
+import OrderService from '../OrderService/OrderService';
 
 const MainPage = () => {
 	return (
 		<>
 			<Hero />
 			<Services />
+			<OrderService />
 			<News />
 			<Clients />
-			<Partners />
+			{/* <Partners /> */}
 			<Map />
 		</>
 	);

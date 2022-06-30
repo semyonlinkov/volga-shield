@@ -10,6 +10,8 @@
 	.chevron {
 		transform: rotate(180deg);
 		margin-bottom: 4px;
+		width: 16px;
+		height: 16px;
 	}
 
 	.burger {
@@ -33,7 +35,7 @@
 			content: '';
 			position: absolute;
 			width: 0px;
-			height: 3px;
+			height: 2px;
 			left: 50%;
 			bottom: 0;
 			background-color: white;

@@ -41,16 +41,28 @@ const Header = ({ setActive }) => {
 						<Menu
 							items={[
 								{
-									label: <a to="/docs">Руководство</a>,
+									label: <a to="/docs">Охрана объектов</a>,
 									key: '0',
 								},
 								{
-									label: <a to="/exams">Вакансии</a>,
+									label: <a to="/exams">Личная охрана</a>,
 									key: '1',
 								},
 								{
-									label: <a to="/fire-safety">Клиенты и партнеры</a>,
+									label: <a to="/fire-safety">Охрана мероприятий</a>,
 									key: '2',
+								},
+								{
+									label: <a to="/fire-safety">Служба ПЦО</a>,
+									key: '3',
+								},
+								{
+									label: <a to="/fire-safety">Мониторинг автотранспортных средств</a>,
+									key: '4',
+								},
+								{
+									label: <a to="/fire-safety">Контрольная панель</a>,
+									key: '4',
 								},
 							]}
 						/>
