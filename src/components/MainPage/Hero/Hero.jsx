@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Hero.module.scss';
-import BigWhiteLogo from './../../img/BigWhiteLogo.png';
+import BigWhiteLogo from './../../../img/BigWhiteLogo.png';
 
 const Hero = () => {
 	return (

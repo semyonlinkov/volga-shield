@@ -1,8 +1,8 @@
 import { Button, Checkbox, Form, Input } from 'antd';
-import styles from './Login.module.scss';
+import styles from './LoginPage.module.scss';
 import IMGLogo from '../../img/logoColor.png';
 
-const Login = () => {
+const LoginPage = () => {
 	const onFinish = (values) => {
 		console.log('Success:', values);
 	};
@@ -62,4 +62,4 @@ const Login = () => {
 	);
 };
 
-export default Login;
+export default LoginPage;

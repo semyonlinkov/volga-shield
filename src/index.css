@@ -92,3 +92,13 @@ h5 {
 .ql-editor {
 	min-height: 150px;
 }
+
+.select_order .ant-select-selection-placeholder {
+	background: -webkit-linear-gradient(left, #aaa 0% 130px, red 0px 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+	font-weight: 500;
+}

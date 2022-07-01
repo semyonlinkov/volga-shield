@@ -1,15 +1,15 @@
 import styles from './Clients.module.scss';
-import IMGAlpha from '../../img/logos/альфаСтрахование.jpg';
-import IMGBeeline from '../../img/logos/билайн.jpg';
-import IMGEatp from '../../img/logos/еатпбанк.png';
-import IMGEMegaphone from '../../img/logos/мегафон.svg';
-import IMGMts from '../../img/logos/мтс.png';
-import IMGPrombank from '../../img/logos/промсвязьбанк.png';
-import IMGRgd from '../../img/logos/ржд.jpg';
-import IMGSber from '../../img/logos/сбербанк.jpg';
-import IMGSvyaznoy from '../../img/logos/связной.png';
-import IMGTransneft from '../../img/logos/транснефть.jpg';
-import IMGAmesco from '../../img/logos/amesco.jpg';
+import IMGAlpha from '../../../img/logos/альфаСтрахование.jpg';
+import IMGBeeline from '../../../img/logos/билайн.jpg';
+import IMGEatp from '../../../img/logos/еатпбанк.png';
+import IMGEMegaphone from '../../../img/logos/мегафон.svg';
+import IMGMts from '../../../img/logos/мтс.png';
+import IMGPrombank from '../../../img/logos/промсвязьбанк.png';
+import IMGRgd from '../../../img/logos/ржд.jpg';
+import IMGSber from '../../../img/logos/сбербанк.jpg';
+import IMGSvyaznoy from '../../../img/logos/связной.png';
+import IMGTransneft from '../../../img/logos/транснефть.jpg';
+import IMGAmesco from '../../../img/logos/amesco.jpg';
 
 const Partners = () => {
 	return (

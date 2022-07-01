@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './News.module.scss';
-import IMGNews1 from '../../img/news1.jpg';
-import IMGNews2 from '../../img/news2.jpg';
-import IMGNews3 from '../../img/news3.png';
+import IMGNews1 from '../../../img/news1.jpg';
+import IMGNews2 from '../../../img/news2.jpg';
+import IMGNews3 from '../../../img/news3.png';
 
 const News = () => {
 	return (

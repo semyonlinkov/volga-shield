@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { UserOutlined } from '@ant-design/icons';
 import { Button, Input, Layout, Menu, Space } from 'antd';
 import Editor from './Editor/Editor';
-import styles from './Cabinet.module.scss';
+import styles from './CabinetPage.module.scss';
 import DragAndDropUpload from './DragAndDropUpload/DragAndDropUpload';
 const { Header, Content, Footer, Sider } = Layout;
 
-const Cabinet = () => {
+const CabinetPage = () => {
 	const [title, setTitle] = useState('');
 
 	return (
@@ -71,4 +71,4 @@ const Cabinet = () => {
 	);
 };
 
-export default Cabinet;
+export default CabinetPage;

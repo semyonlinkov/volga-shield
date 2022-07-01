@@ -11,23 +11,28 @@ const OrderService = () => {
 		<div className={styles.orderService_wrapper}>
 			<h2 className={styles.title}>Форма обратной связи</h2>
 			<div className={styles.form_wrapper}>
-				<div className={styles.form1}>
-					<div className={styles.form_item}>
+				<div className={styles.form}>
+					<div className={styles.form_item1}>
 						<Input size="large" placeholder="Имя, фамилия *" />
 					</div>
-					<div className={styles.form_item}>
+					<div className={styles.form_item2}>
 						<Input size="large" placeholder="Телефон *" />
 					</div>
-					<div className={styles.form_item}>
+					<div className={styles.form_item3}>
 						<Input size="large" placeholder="E-mail *" />
 					</div>
 				</div>
-				<Select placeholder="Цель обращения *" style={{ width: '100%', marginBottom: '20px' }}>
+				<Select placeholder="Цель обращения *" size="large" className={`${styles.select_order} select_order`}>
 					<Option value="work">Устроиться на работу</Option>
 					<Option value="defence">Заказать услуги охраны</Option>
 					<Option value="raport">Отправить жалобу</Option>
 				</Select>
-				<TextArea autoSize={{ minRows: 3, maxRows: 5 }} />
+				<TextArea
+					className={styles.textarea_order}
+					size="large"
+					placeholder="Описание заявки *"
+					autoSize={{ minRows: 3, maxRows: 5 }}
+				/>
 				<p style={{ fontSize: '0.9rem', padding: '10px 0', textAlign: 'center' }}>
 					Заполняя форму, я соглашаюсь на обработку персональных данных
 				</p>

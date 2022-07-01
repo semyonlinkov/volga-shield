@@ -41,6 +41,31 @@ const Header = ({ setActive }) => {
 						<Menu
 							items={[
 								{
+									label: <a to="/docs">Руководство</a>,
+									key: '0',
+								},
+								{
+									label: <a to="/exams">Вакансии</a>,
+									key: '1',
+								},
+								{
+									label: <a to="/fire-safety">Клиенты и партнеры</a>,
+									key: '2',
+								},
+							]}
+						/>
+					}
+					trigger={['click', 'hover']}>
+					<li className={styles.link}>
+						КЛИЕНТАМ <img className={styles.chevron} src={IMGChevron} alt="chevron" />
+					</li>
+				</Dropdown>
+				<Dropdown
+					placement="bottom"
+					overlay={
+						<Menu
+							items={[
+								{
 									label: <a to="/docs">Охрана объектов</a>,
 									key: '0',
 								},
