@@ -3,11 +3,16 @@ import styles from './Header.module.scss';
 import { Dropdown, Menu } from 'antd';
 import IMGChevron from './../../img/chevron20.png';
 import IMGBurger from './../../img/burger60.png';
+import { Link, useNavigate } from 'react-router-dom';
 
-const Header = ({ setActive }) => {
+const Header = ({ setActive, style = {} }) => {
+	const navigate = useNavigate();
+
 	return (
-		<header className={styles.header_wrapper}>
-			<span className={styles.logo}>ВОЛГА-ЩИТ</span>
+		<header className={styles.header_wrapper} style={style}>
+			<span className={styles.logo} onClick={() => navigate('/')}>
+				ВОЛГА-ЩИТ
+			</span>
 			<img className={styles.burger} src={IMGBurger} alt="burger_menu" onClick={() => setActive((prev) => !prev)} />
 			<ul className={styles.links}>
 				<Dropdown
@@ -16,15 +21,15 @@ const Header = ({ setActive }) => {
 						<Menu
 							items={[
 								{
-									label: <a to="/docs">Руководство</a>,
+									label: <Link to="/about-us">О нас</Link>,
 									key: '0',
 								},
 								{
-									label: <a to="/exams">Вакансии</a>,
+									label: <Link to="/vacancies">Вакансии</Link>,
 									key: '1',
 								},
 								{
-									label: <a to="/fire-safety">Клиенты и партнеры</a>,
+									label: <Link to="/clients-and-partners">Клиенты и партнеры</Link>,
 									key: '2',
 								},
 							]}
@@ -33,31 +38,6 @@ const Header = ({ setActive }) => {
 					trigger={['click', 'hover']}>
 					<li className={styles.link}>
 						О КОМПАНИИ <img className={styles.chevron} src={IMGChevron} alt="chevron" />
-					</li>
-				</Dropdown>
-				<Dropdown
-					placement="bottom"
-					overlay={
-						<Menu
-							items={[
-								{
-									label: <a to="/docs">Руководство</a>,
-									key: '0',
-								},
-								{
-									label: <a to="/exams">Вакансии</a>,
-									key: '1',
-								},
-								{
-									label: <a to="/fire-safety">Клиенты и партнеры</a>,
-									key: '2',
-								},
-							]}
-						/>
-					}
-					trigger={['click', 'hover']}>
-					<li className={styles.link}>
-						КЛИЕНТАМ <img className={styles.chevron} src={IMGChevron} alt="chevron" />
 					</li>
 				</Dropdown>
 				<Dropdown
@@ -87,7 +67,7 @@ const Header = ({ setActive }) => {
 								},
 								{
 									label: <a to="/fire-safety">Контрольная панель</a>,
-									key: '4',
+									key: '5',
 								},
 							]}
 						/>
@@ -103,16 +83,37 @@ const Header = ({ setActive }) => {
 						<Menu
 							items={[
 								{
-									label: <a to="/docs">Руководство</a>,
+									label: <Link to="/exams">Рекомендации</Link>,
 									key: '0',
 								},
 								{
-									label: <a to="/exams">Вакансии</a>,
+									label: <Link to="/fire-safety">Документы для договора</Link>,
 									key: '1',
 								},
 								{
-									label: <a to="/fire-safety">Клиенты и партнеры</a>,
+									label: <Link to="/fire-safety">Автоматическая проверка состояния охраняемого объекта</Link>,
 									key: '2',
+								},
+							]}
+						/>
+					}
+					trigger={['click', 'hover']}>
+					<li className={styles.link}>
+						КЛИЕНТАМ <img className={styles.chevron} src={IMGChevron} alt="chevron" />
+					</li>
+				</Dropdown>
+				<Dropdown
+					placement="bottom"
+					overlay={
+						<Menu
+							items={[
+								{
+									label: <a to="/docs">Новости</a>,
+									key: '0',
+								},
+								{
+									label: <a to="/exams">Галерея</a>,
+									key: '1',
 								},
 							]}
 						/>
@@ -128,16 +129,12 @@ const Header = ({ setActive }) => {
 						<Menu
 							items={[
 								{
-									label: <a to="/docs">Руководство</a>,
+									label: <a to="/docs">Главный офис</a>,
 									key: '0',
 								},
 								{
-									label: <a to="/exams">Вакансии</a>,
+									label: <a to="/exams">Филиалы</a>,
 									key: '1',
-								},
-								{
-									label: <a to="/fire-safety">Клиенты и партнеры</a>,
-									key: '2',
 								},
 							]}
 						/>

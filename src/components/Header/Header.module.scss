@@ -6,6 +6,12 @@
 	align-items: center;
 	padding: 30px 40px 30px 40px;
 	color: white;
+	white-space: nowrap;
+	z-index: 100;
+
+	.logo {
+		cursor: pointer;
+	}
 
 	.chevron {
 		transform: rotate(180deg);
@@ -24,6 +30,7 @@
 		align-items: center;
 		list-style: none;
 		margin-bottom: 0;
+		padding-left: 0;
 
 		li {
 			position: relative;
@@ -51,6 +58,8 @@
 
 @media screen and (max-width: 992px) {
 	.header_wrapper {
+		padding: 15px 20px 15px 20px;
+
 		.burger {
 			display: block;
 			width: 35px;

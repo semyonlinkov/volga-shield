@@ -45,6 +45,12 @@
 		}
 	}
 
+	@media screen and (max-width: 992px) {
+		.form {
+			flex-direction: column;
+		}
+	}
+
 	.select_order {
 		width: 100%;
 		margin-bottom: 20px;

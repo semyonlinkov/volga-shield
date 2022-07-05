@@ -16,7 +16,7 @@ const BurgerMenu = ({ active, setActive }) => {
 						<Link to={'/'}>Главная</Link>
 					</li>
 					<li>
-						<Link to={'/about'}>О Нас</Link>
+						<Link to={'/about-us'}>О Нас</Link>
 					</li>
 					<li
 						onClick={(e) => {

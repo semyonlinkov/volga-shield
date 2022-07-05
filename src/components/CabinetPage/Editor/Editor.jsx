@@ -43,7 +43,7 @@ const Editor = () => {
 				formats={formats}
 				placeholder="Введите вашу новость"
 			/>
-			{/* <div className="view ql-editor" dangerouslySetInnerHTML={{ __html: value }}></div> */}
+			<div className="view ql-editor" dangerouslySetInnerHTML={{ __html: value }}></div>
 		</>
 	);
 };

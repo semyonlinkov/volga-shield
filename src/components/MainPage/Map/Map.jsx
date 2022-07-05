@@ -14,7 +14,9 @@ const Map = () => {
 		mapWrap.current.appendChild(script);
 
 		return () => {
-			mapWrap.current.removeChild(script);
+			if (mapWrap.current) {
+				mapWrap.current.removeChild(script);
+			}
 		};
 	}, []);
 

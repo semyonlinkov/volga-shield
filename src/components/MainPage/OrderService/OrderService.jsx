@@ -3,6 +3,7 @@ import styles from './OrderService.module.scss';
 import { Button, Input, Select } from 'antd';
 
 import TextArea from 'antd/lib/input/TextArea';
+import { Link } from 'react-router-dom';
 
 const { Option } = Select;
 
@@ -33,9 +34,11 @@ const OrderService = () => {
 					placeholder="Описание заявки *"
 					autoSize={{ minRows: 3, maxRows: 5 }}
 				/>
-				<p style={{ fontSize: '0.9rem', padding: '10px 0', textAlign: 'center' }}>
-					Заполняя форму, я соглашаюсь на обработку персональных данных
-				</p>
+				<div style={{ width: '100%', padding: '10px 0', textAlign: 'center' }}>
+					<Link to={'/personal-data-agreement'} style={{ fontSize: '0.9rem' }}>
+						Заполняя форму, я соглашаюсь на обработку персональных данных
+					</Link>
+				</div>
 				<button className="btn" style={{ border: '1px solid #dfdfdf', padding: '0.95rem', textAlign: 'center' }}>
 					<span>Отправить</span>
 				</button>
