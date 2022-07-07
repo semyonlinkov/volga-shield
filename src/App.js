@@ -11,13 +11,13 @@ import AboutUsPage from './components/AboutUsPage/AboutUsPage';
 import VacanciesPage from './components/VacanciesPage/VacanciesPage';
 import PersonalDataAgreementPage from './components/PersonalDataAgreementPage/PersonalDataAgreementPage';
 import ClientsAndPartners from './components/ClientsAndPartners/ClientsAndPartners';
+import NewsPage from './components/NewsPage/NewsPage';
 
 function App() {
 	const [burgerActive, setBurgerActive] = useState(false);
 
 	return (
 		<BrowserRouter>
-
 			<Routes>
 				<Route path='/' element={<>
 					<BurgerMenu active={burgerActive} setActive={setBurgerActive} />
@@ -47,6 +47,12 @@ function App() {
 					<BurgerMenu active={burgerActive} setActive={setBurgerActive} />
 					<Header setActive={setBurgerActive} style={{ backgroundColor: '#191919' }} />
 					< ClientsAndPartners />
+					<Footer />
+				</>} />
+				<Route path='/news' element={<>
+					<BurgerMenu active={burgerActive} setActive={setBurgerActive} />
+					<Header setActive={setBurgerActive} style={{ backgroundColor: '#191919' }} />
+					< NewsPage />
 					<Footer />
 				</>} />
 				<Route path='/login' element={< LoginPage />} />

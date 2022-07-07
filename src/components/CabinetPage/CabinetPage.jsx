@@ -3,11 +3,18 @@ import { UserOutlined } from '@ant-design/icons';
 import { Button, Input, Layout, Menu, Space } from 'antd';
 import Editor from './Editor/Editor';
 import styles from './CabinetPage.module.scss';
-import DragAndDropUpload from './DragAndDropUpload/DragAndDropUpload';
+import UploadImg from './UploadImg/UploadImg';
+import { $newsForm, setNewsForm } from '../../state/newsForm';
+import { useStore } from 'effector-react';
+import { addOneNews } from '../../api-service/addOneNews';
 const { Header, Content, Footer, Sider } = Layout;
 
 const CabinetPage = () => {
-	const [title, setTitle] = useState('');
+	const newsForm = useStore($newsForm);
+
+	const sendOneNewsHandler = (form) => {
+		addOneNews(form);
+	};
 
 	return (
 		<Layout style={{ minHeight: '100vh' }}>
@@ -45,15 +52,21 @@ const CabinetPage = () => {
 							padding: 24,
 						}}>
 						<h5 style={{ margin: '0 0 10px 5px' }}>Заголовок</h5>
-						<Input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Заголовок" />
+						<Input
+							value={newsForm.title}
+							onChange={(e) => setNewsForm({ title: e.target.value })}
+							placeholder="Заголовок"
+						/>
 						<div>
-							<h5 style={{ margin: '10px 0 10px 5px' }}>Загрузить изображение</h5>
-							<DragAndDropUpload />
+							<h5 style={{ margin: '10px 0 10px 5px' }}>Загрузить изображение для заголовка</h5>
+							<UploadImg />
 						</div>
 						<h5 style={{ margin: '10px 0 10px 5px' }}>Текст новости</h5>
 						<Editor />
 						<Space style={{ paddingTop: '15px' }} size="large">
-							<Button type="primary">Отправить новость</Button>
+							<Button type="primary" onClick={() => sendOneNewsHandler(newsForm)}>
+								Отправить новость
+							</Button>
 							<Button type="primary" danger>
 								Очистить
 							</Button>

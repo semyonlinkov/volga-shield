@@ -46,27 +46,27 @@ const Header = ({ setActive, style = {} }) => {
 						<Menu
 							items={[
 								{
-									label: <a to="/docs">Охрана объектов</a>,
+									label: <Link to="/docs">Охрана объектов</Link>,
 									key: '0',
 								},
 								{
-									label: <a to="/exams">Личная охрана</a>,
+									label: <Link to="/exams">Личная охрана</Link>,
 									key: '1',
 								},
 								{
-									label: <a to="/fire-safety">Охрана мероприятий</a>,
+									label: <Link to="/fire-safety">Охрана мероприятий</Link>,
 									key: '2',
 								},
 								{
-									label: <a to="/fire-safety">Служба ПЦО</a>,
+									label: <Link to="/fire-safety">Служба ПЦО</Link>,
 									key: '3',
 								},
 								{
-									label: <a to="/fire-safety">Мониторинг автотранспортных средств</a>,
+									label: <Link to="/fire-safety">Мониторинг автотранспортных средств</Link>,
 									key: '4',
 								},
 								{
-									label: <a to="/fire-safety">Контрольная панель</a>,
+									label: <Link to="/fire-safety">Контрольная панель</Link>,
 									key: '5',
 								},
 							]}
@@ -108,11 +108,11 @@ const Header = ({ setActive, style = {} }) => {
 						<Menu
 							items={[
 								{
-									label: <a to="/docs">Новости</a>,
+									label: <Link to="/news">Новости</Link>,
 									key: '0',
 								},
 								{
-									label: <a to="/exams">Галерея</a>,
+									label: <Link to="/exams">Галерея</Link>,
 									key: '1',
 								},
 							]}
@@ -129,11 +129,11 @@ const Header = ({ setActive, style = {} }) => {
 						<Menu
 							items={[
 								{
-									label: <a to="/docs">Главный офис</a>,
+									label: <Link to="/docs">Главный офис</Link>,
 									key: '0',
 								},
 								{
-									label: <a to="/exams">Филиалы</a>,
+									label: <Link to="/exams">Филиалы</Link>,
 									key: '1',
 								},
 							]}
